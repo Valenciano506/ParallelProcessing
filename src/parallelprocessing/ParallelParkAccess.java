@@ -17,8 +17,8 @@ public class ParallelParkAccess {
 		empresaValen.registrarAparcamiento(parking1);
 		empresaValen.registrarAparcamiento(parking2);
 		
-		Thread t1 = new EntranceJob(parking1);
-		Thread t2 = new EntranceJob(parking1);
+		Thread t1 = new EntranceJob(parking1, "Justo");
+		Thread t2 = new EntranceJob(parking1, "Camicha");
 		t1.start();
 		t2.start();
 		
