@@ -22,9 +22,11 @@ public class EntranceJob extends Thread {
 
 	@Override
 	public void run() {
-		System.out.println("Start the job with thread " + Thread.currentThread().getName());
-		System.out.println(parking + " object address from thread " + Thread.currentThread().getName());
-		System.out.println("End the job with thread " + Thread.currentThread().getName());
+		String threadName = Thread.currentThread().getName();
+		System.out.println("Start the job with thread " + threadName);
+		System.out.println(parking + " object address from thread " + threadName);
+		parking.entrarCoche();
+		System.out.println("End the job with thread " + threadName);
 	}
 
 }
