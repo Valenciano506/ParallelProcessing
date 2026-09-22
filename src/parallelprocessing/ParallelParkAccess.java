@@ -17,9 +17,11 @@ public class ParallelParkAccess {
 		empresaValen.registrarAparcamiento(parking1);
 		empresaValen.registrarAparcamiento(parking2);
 		
-		int threads = 40;
-		for (int i = 0; i < threads; i++) {
-			
+		int numOfThreads = 40;
+		Thread[] threads = new Thread[numOfThreads];
+		for (int i = 0; i < numOfThreads; i++) {
+			Thread t = new EntranceJob(parking1, "Justo" + i);
+			threads[i] = t;
 		}
 		Thread t1 = new EntranceJob(parking1, "Justo");
 		Thread t2 = new EntranceJob(parking1, "Camicha");
