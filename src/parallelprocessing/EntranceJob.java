@@ -25,7 +25,11 @@ public class EntranceJob extends Thread {
 		String threadName = Thread.currentThread().getName();
 		System.out.println("Start the job with thread " + threadName);
 		System.out.println(parking + " object address from thread " + threadName);
-		parking.entrarCoche();
+		
+		for (int i = 0; i < 200; i++) {
+			parking.entrarCoche();	
+		}
+		
 		System.out.println("End the job with thread " + threadName);
 	}
 

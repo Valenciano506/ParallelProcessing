@@ -11,13 +11,13 @@ public class ParallelParkAccess {
 	
 	public static void main(String[] args) {
 		
-		aparcamiento parking1 = new aparcamiento("madrid", "Aparcamiento 1", 20000);
-		aparcamiento parking2 = new aparcamiento("barcelona", "Aparcamiento 2", 20000);
+		aparcamiento parking1 = new aparcamiento("madrid", "Aparcamiento 1", 10000000);
+		aparcamiento parking2 = new aparcamiento("barcelona", "Aparcamiento 2", 10000000);
 		empresa empresaValen = new empresa("Valen");
 		empresaValen.registrarAparcamiento(parking1);
 		empresaValen.registrarAparcamiento(parking2);
 		
-		int numOfThreads = 200;
+		int numOfThreads = 1000;
 		Thread[] threads = new Thread[numOfThreads];
 		for (int i = 0; i < numOfThreads; i++) {
 			Thread t = new EntranceJob(parking1, "Justo" + i);
