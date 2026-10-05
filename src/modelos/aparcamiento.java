@@ -15,7 +15,7 @@ public class aparcamiento {
 
     // Sección crítica: synchronized evita que dos hilos modifiquen
     // el contador a la vez (condición de carrera)
-    public synchronized void entrarCoche() {
+    public void entrarCoche() {
         if (cochesAparcados < aforoMaximo) {
             cochesAparcados++;
             System.out.println("[ENTRADA] " + nombre + " (" + ciudad + ") -> "
@@ -25,7 +25,7 @@ public class aparcamiento {
         }
     }
 
-    public synchronized void salirCoche() {
+    public void salirCoche() {
         if (cochesAparcados > 0) {
             cochesAparcados--;
             System.out.println("[SALIDA]  " + nombre + " (" + ciudad + ") -> "
@@ -35,7 +35,7 @@ public class aparcamiento {
         }
     }
 
-    public synchronized int getCochesAparcados() {
+    public int getCochesAparcados() {
         return cochesAparcados;
     }
 
