@@ -2,7 +2,7 @@ package Tareas;
 
 import java.util.Random;
 
-public class ParallelSearching1 {
+public class Tarea6 {
 
     // Variable compartida: indica si algún hilo ya encontró el número.
     // volatile garantiza que ambos hilos vean siempre el valor actualizado.

@@ -2,7 +2,7 @@ package Tareas;
 
 import java.util.Random;
 
-public class NumberSearching {
+public class Tarea5 {
 
     public static void main(String[] args) {
 
