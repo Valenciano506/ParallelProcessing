@@ -1,10 +1,9 @@
-/**
- * 
- */
 package sum;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 /*
  *
@@ -19,6 +18,8 @@ public class ParallelSuming {
 		ArrayList<Integer> nums = new ArrayList<>(100);
 		//int[] array = new int[100];
 		List<Integer> nums2 = new ArrayList<>(100);
+		
+		ExecutorService executorService = Executors.newFixedThreadPool(Runtime.getRuntime().availableProcessors());
 		
 	}
 
