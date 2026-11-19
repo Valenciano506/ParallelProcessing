@@ -21,14 +21,17 @@ public class RecursiveRepeatings {
 		}
 		
 		//Third way of doing the same
-		repeatJob(1);
+		repeatJob(0);
 		
 	}
 
 	private static void repeatJob(int i) {
-		
-		System.out.println("Repeat job" + i);
-		
+
+	    if (i < 5) {
+	        System.out.println("Repeat job " + i);
+	        repeatJob(i + 1);
+	    }
+
 	}
 
 }
